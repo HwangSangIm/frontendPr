@@ -1,7 +1,6 @@
 import React from 'react';
 
 function CharacterLevel({ character, history }) {
-  // 💡 [안전장치] 데이터가 완전히 준비되기 전(검색 중이거나 데이터가 비었을 때) 로딩 표시로 크래시 방지
   if (!character) {
     return (
       <div className="w-full flex flex-col justify-center items-center min-h-[50vh] text-slate-500">
@@ -16,8 +15,6 @@ function CharacterLevel({ character, history }) {
   return (
     <div className="w-full text-slate-700 flex flex-col items-center font-sans animate-in fade-in duration-200">
       <div className="w-full max-w-5xl flex flex-col gap-6">
-        
-        {/* 캐릭터 프로필 상단 고정 */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex gap-8 items-center">
           <div className="bg-[#e0e7ff]/40 rounded-2xl p-3 w-36 h-36 flex justify-center items-center border border-slate-100/80 shrink-0">
             <img src={character.character_image || character.character_img} alt="Avatar" className="w-28 h-auto object-contain" />
@@ -41,8 +38,6 @@ function CharacterLevel({ character, history }) {
             </div>
           </div>
         </div>
-
-        {/* 📈 독자적인 최근 7일 경험치 상세 변동 리스트 카드 */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
           <h3 className="text-xl font-bold text-slate-800 mb-6">최근 7일 경험치 변동 히스토리</h3>
           
@@ -78,6 +73,4 @@ function CharacterLevel({ character, history }) {
     </div>
   );
 }
-
-// 💡 default export 추가로 외부에서 완벽히 연동 가능
 export default CharacterLevel;

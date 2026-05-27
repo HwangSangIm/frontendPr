@@ -69,7 +69,6 @@ function ItemTooltipModal({ item, onClose }) {
       return prioA - prioB;
     });
 
-  // 💡 스타포스 개수 파악
   const currentStarforce = Number(item.starforce || item.starforce_level || 0);
   const hasStarforce = (item.starforce || item.starforce_level) && item.starforce !== '0';
 
@@ -78,7 +77,6 @@ function ItemTooltipModal({ item, onClose }) {
       <div className="maple-tooltip-modal p-6 text-white font-sans text-xs relative select-none w-full max-w-[380px]" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 text-zinc-500 font-bold text-sm">✕</button>
 
-        {/* 💡 [수정] 스타포스 영역: 5개씩 3번(15개) 배치 후 줄바꿈하여 총 2줄 구조 생성 */}
         {hasStarforce && (
           <div className="starforce-container mb-3 border-b border-zinc-700/50 pb-2.5 flex flex-col items-center gap-y-1 text-[11px] tracking-wider">
             {[0, 1].map((lineIndex) => (
@@ -86,7 +84,6 @@ function ItemTooltipModal({ item, onClose }) {
                 {[0, 1, 2].map((groupIndex) => (
                   <div key={groupIndex} className="flex gap-x-0.5">
                     {Array.from({ length: 5 }).map((_, starIndex) => {
-                      // 전체 30개 중 현재 별의 절대 위치 인덱스 계산 (0 ~ 29)
                       const globalIndex = (lineIndex * 15) + (groupIndex * 5) + starIndex;
                       return (
                         <span key={starIndex} className="text-amber-400 font-bold select-none">
@@ -112,7 +109,6 @@ function ItemTooltipModal({ item, onClose }) {
           </div>
         </div>
 
-        {/* 스탯 세부 수치 동적 출력부 */}
         <div className="text-[11px] mb-3 pb-3 border-b border-dashed border-zinc-700 space-y-1.5 font-mono">
           <p className="mb-2 font-sans"><span className="text-zinc-100">장비분류 :</span> <span className="text-white">{slot}</span></p>
           
@@ -159,7 +155,6 @@ function ItemTooltipModal({ item, onClose }) {
           })}
         </div>
 
-        {/* 잠재옵션 & 에디셔널 */}
         {pOpts.length > 0 && (
           <div className="mb-3 border-2 border-green-800 p-3 bg-zinc-950/60 rounded-md">
             <p className="text-green-400 font-bold mb-1">✨ 잠재옵션</p>
