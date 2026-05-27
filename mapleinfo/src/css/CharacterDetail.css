@@ -1,0 +1,66 @@
+/* CharacterDetail.css */
+
+/* 애니메이션 및 컨테이너 */
+.detail-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* 프로필 영역 */
+.avatar-box {
+  background-color: rgba(224, 231, 255, 0.4);
+}
+
+.exp-bar-track {
+  border-color: rgba(226, 232, 240, 0.5);
+}
+
+/* 장비 등급별 배경 및 테두리 커스텀 */
+.eq-card.grade-legendary { background-color: #fefce8; border-color: #facc15; }
+.eq-card.grade-unique { background-color: #faf5ff; border-color: #a855f7; }
+.eq-card.grade-epic { background-color: #f0fdf4; border-color: #3b82f6; }
+.eq-card.grade-rare { background-color: #f8fafc; border-color: #94a3b8; }
+.eq-card.grade-none { background-color: #f8fafc; border-color: #94a3b8; }
+
+/* 넥슨 인게임형 툴팁 모달 스타일 */
+.maple-tooltip-modal {
+  width: 360px;
+  background-color: rgba(34, 34, 34, 0.95);
+  border: 2px solid #555555;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* 스타포스 별 정렬 (15개 기준 줄바꿈) */
+.starforce-container {
+  font-family: monospace;
+  color: #fcd34d;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-align: center;
+}
+
+/* 세부 옵션 스탯 (STR: +150 (10 + 40 ... ) 수치 정렬 로직) */
+.stat-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f1f5f9;
+  margin-bottom: 0.375rem;
+}
+
+.stat-detail-breakdown {
+  color: #71717a;
+  font-size: 11px;
+  letter-spacing: -0.025em;
+}
+
+/* 등급별 모달 텍스트 색상 */
+.text-grade-legendary { color: #a3e635; }
+.text-grade-unique { color: #c084fc; }
+.text-grade-epic { color: #60a5fa; }
+.text-grade-rare { color: #a1a1aa; }
+.text-grade-none { color: #a1a1aa; }
