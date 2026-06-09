@@ -1,0 +1,31 @@
+@reference "../index.css";
+
+.maple-tooltip-modal {
+  background-color: #1c1c1e;
+  border: 2px solid #444446;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.starforce-container {
+  color: #71717a;
+}
+
+.text-grade-legendary {
+  color: #10b981;
+}
+
+.text-grade-unique {
+  color: #f59e0b;
+}
+
+.text-grade-epic {
+  color: #8b5cf6;
+}
+
+.text-grade-rare {
+  color: #3b82f6;
+}
+
+.text-grade-none {
+  color: #a1a1aa;
+}

@@ -11,7 +11,6 @@ const GRADE_CLASS_MAP = {
 };
 
 function CharacterDetail({ character, stat, equipment }) {
-  const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState(null);
 
   if (!character) return <div className="text-center py-20 text-slate-500">정보가 없습니다.</div>;
@@ -58,8 +57,6 @@ function CharacterDetail({ character, stat, equipment }) {
           ))}
         </div>
       </div>
-
-      {/* [3] 장비 리스트 */}
       <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
         <h3 className="text-xl font-bold text-slate-800 mb-6">장비 정보</h3>
         {itemList.length === 0 ? (
@@ -73,9 +70,7 @@ function CharacterDetail({ character, stat, equipment }) {
               const icon = item.item_icon || item.itemIcon;
 
               return (
-                <div 
-                  key={i} 
-                  onClick={() => setSelectedItem(item)} 
+                <div key={i} onClick={() => setSelectedItem(item)} 
                   className={`border-2 p-4 rounded-2xl flex items-center gap-4 cursor-pointer hover:shadow-md transition-all eq-card ${GRADE_CLASS_MAP[grade] || 'grade-none'}`}
                 >
                   <div className="w-12 h-12 bg-slate-50 rounded-xl flex justify-center items-center shrink-0 border border-slate-100 p-1">
@@ -91,8 +86,6 @@ function CharacterDetail({ character, stat, equipment }) {
           </div>
         )}
       </div>
-
-      {/* 💡 에러 위험이 없는 확실한 모달 조건부 렌더링 */}
       {selectedItem && (
         <ItemTooltipModal item={selectedItem} onClose={() => setSelectedItem(null)} />
       )}

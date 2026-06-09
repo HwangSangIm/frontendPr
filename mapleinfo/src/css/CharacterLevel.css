@@ -1,0 +1,107 @@
+@reference "../index.css";
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.loading-container {
+  @apply w-full flex flex-col justify-center items-center min-h-[50vh] text-slate-500;
+}
+
+.loading-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-4;
+}
+
+.level-container {
+  @apply w-full text-slate-700 flex flex-col items-center font-sans;
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.level-wrapper {
+  @apply w-full max-w-5xl flex flex-col gap-6;
+}
+
+.dashboard-box {
+  @apply w-full bg-[#4b5563] rounded-2xl overflow-hidden shadow-lg border border-slate-600/40 text-slate-200 mt-2;
+}
+
+.dashboard-title-bar {
+  @apply w-full bg-[#374151] py-4 text-center border-b border-slate-600/50;
+}
+
+.dashboard-title {
+  @apply text-lg font-bold text-white tracking-wide;
+}
+
+.dashboard-content-grid {
+  @apply p-8 grid grid-cols-1 lg:grid-cols-4 gap-8 items-center;
+}
+
+.chart-area-wrapper {
+  @apply lg:col-span-3 w-full h-[360px];
+}
+
+.no-data-msg {
+  @apply w-full h-full flex justify-center items-center text-slate-400 text-sm;
+}
+
+.chart-tooltip-box {
+  @apply bg-[#2d3748]/95 px-3 py-2 rounded-xl border border-slate-600/50 shadow-xl text-center text-xs text-white;
+}
+
+.chart-tooltip-title {
+  @apply font-bold mb-1;
+}
+
+.chart-tooltip-data {
+  @apply flex items-center justify-center gap-1.5;
+}
+
+.chart-tooltip-marker {
+  @apply w-2.5 h-2.5 bg-[#eab308] rounded-sm inline-block;
+}
+
+.chart-tooltip-value {
+  @apply font-mono text-slate-200;
+}
+
+.summary-spec-panel {
+  @apply w-full border-t lg:border-t-0 lg:border-l border-slate-500/50 pt-6 lg:pt-0 lg:pl-8 text-base text-slate-300 h-full flex flex-col justify-center;
+}
+
+.summary-list {
+  @apply space-y-5 font-medium;
+}
+
+.summary-item {
+  @apply flex items-center gap-2.5;
+}
+
+.summary-bullet {
+  @apply text-slate-400 text-lg;
+}
+
+.summary-highlight-cyan {
+  @apply text-[#22d3ee] font-bold font-mono text-lg;
+}
+
+.summary-highlight-white {
+  @apply text-white font-bold text-base;
+}
+
+.summary-highlight-green {
+  @apply text-[#a3e635] text-lg;
+}
+
+.summary-days-subtext {
+  @apply text-sm text-slate-400 font-normal block mt-1 ml-5;
+}
+
+.summary-highlight-red {
+  @apply text-[#f43f5e] font-bold text-base;
+}
+
+.summary-text-disabled {
+  @apply text-slate-400 font-bold;
+}

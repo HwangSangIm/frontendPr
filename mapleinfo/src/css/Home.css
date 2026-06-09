@@ -1,0 +1,81 @@
+@reference "../index.css";
+
+.home-container {
+  @apply flex-1 flex flex-col items-center justify-center -mt-12 px-4;
+}
+
+.home-header {
+  @apply flex flex-col items-center mb-8;
+}
+
+.home-title-wrapper {
+  @apply flex items-center gap-3 mb-2;
+}
+
+.home-logo-emoji {
+  @apply text-4xl;
+}
+
+.home-title {
+  @apply text-4xl font-black tracking-tight text-slate-800;
+}
+
+.home-subtitle {
+  @apply text-slate-400 font-medium text-base md:text-lg;
+}
+
+.search-box-wrapper {
+  @apply w-full max-w-2xl relative mb-16;
+}
+
+.search-box-input {
+  @apply w-full px-8 py-5 rounded-2xl bg-white shadow-xl shadow-blue-100/50 border-2 border-transparent focus:border-blue-300 outline-none text-lg transition-all pr-16 text-slate-800;
+}
+
+.search-box-btn {
+  @apply absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-slate-100 rounded-xl text-slate-500 hover:bg-blue-50 hover:text-blue-500 transition-all;
+}
+
+.search-error-msg {
+  @apply absolute -bottom-8 left-4 text-red-500 text-sm font-medium;
+}
+
+.feature-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl;
+}
+
+.loading-overlay {
+  @apply fixed inset-0 bg-white/60 backdrop-blur-sm flex justify-center items-center z-50;
+}
+
+.loading-content-box {
+  @apply flex flex-col items-center gap-4;
+}
+
+.loading-circle-spinner {
+  @apply w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin;
+}
+
+.loading-status-text {
+  @apply text-blue-600 font-bold tracking-tight;
+}
+
+.feature-card {
+  @apply bg-amber-100/70 p-6 rounded-3xl shadow-md border-2 border-amber-200/60 hover:bg-amber-100 hover:shadow-xl hover:shadow-amber-200/50 hover:-translate-y-1 transition-all cursor-pointer;
+}
+
+.feature-card-icon-box {
+  @apply w-14 h-14 bg-white/90 rounded-2xl flex justify-center items-center mb-4 text-2xl shadow-sm transition-transform;
+}
+
+.feature-card:hover .feature-card-icon-box {
+  transform: scale(1.1);
+}
+
+.feature-card-title {
+  @apply text-lg font-bold text-slate-800 mb-1;
+}
+
+.feature-card-desc {
+  @apply text-sm text-slate-600 font-medium leading-relaxed;
+}
